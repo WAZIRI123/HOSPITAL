@@ -1,3 +1,5 @@
+
+@include('../menu');
 <div class="page-section">
     <div class="container">
       <h1 class="text-center mb-5 wow fadeInUp">Our Doctors</h1>
@@ -21,10 +23,9 @@
           </div>
         </div>
         @endforeach
-    
-           
           </div>
         </div>
       </div>
     </div>
   </div>
+  @include('footer')

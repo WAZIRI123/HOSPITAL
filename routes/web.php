@@ -34,11 +34,12 @@ Route::post('/add_news',[newsController::class,'add_news'])->name('add_news');
 Route::get('/news',[newsController::class,'index']);
 
 Route::get('/appointments',[HomeController::class,'appointments']);
-
+Route::get('/showappointments',[HomeController::class,'showappointments']);
+Route::get('/about',[HomeController::class,'about']);
+Route::get('/doctors',[HomeController::class,'doctors']);
 Route::get('/User_Update_appointment/{id}',[HomeController::class,'User_Update_appointment']);
 
 Route::post('/edit_myAppointment/{id}',[HomeController::class,'edit_myAppointment']);
-
 
 Route::get('/Adminappointment',[HomeController::class,'Adminappointment']);
 

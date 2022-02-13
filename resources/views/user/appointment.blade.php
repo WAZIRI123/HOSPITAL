@@ -1,3 +1,4 @@
+@include('../menu')
 <div class="page-section">
     <div class="container">
       <h1 class="text-center wow fadeInUp">Make an Appointment</h1>
@@ -16,7 +17,7 @@
           <div class="col-12 col-sm-6 py-2 wow fadeInRight" data-wow-delay="300ms">
             <select id="departement" class="custom-select" name="doctor">
               <option >--select doctor---</option>
-              @foreach($data1 as $data)
+              @foreach($data as $data)
               <option value="{{$data->name}}--{{$data->specialty}}" >{{$data->name}}--{{$data->specialty}}</option>
              @endforeach
             </select>
@@ -33,3 +34,4 @@
       </form>
     </div>
   </div> <!-- .page-section -->
+  @include('footer')

@@ -79,7 +79,7 @@
         <!-- partial -->
         <h1>App</h1>
         <div class="main-panel">
-          <div class="content-wrapper">
+          <div class="content-wrapper bg-primary">
         <h1 style="text-align:center; color:white" 
          class="mb-3  text-uppercase font-weight-bold ">
          Appointment List</h1>
@@ -89,29 +89,29 @@
           {{Session::get('message')}}
           </div>
         @endif
-        <div class="d-flex justify-content-center">
-        <table class=" table table-striped  table-borderless w-75 border-light ">
+        <div class="d-flex justify-content-left row w-100 table-responsive">
+        <table class=" table table-striped">
         <tr class="text-primary">
         <thead class="text-center thead-light ">
-          <th class="p-3  text-dark font-weight-bold">Client</th>
-          <th class="p-3  text-dark font-weight-bold">Client's Email</th>
-          <th class="p-3  text-dark font-weight-bold">doctor</th>
-          <th class="p-3  text-dark font-weight-bold">Reason</th>
-          <th class="p-3  text-dark font-weight-bold">Date</th>
-          <th class="p-3  text-dark font-weight-bold">Status</th>
-          <th class="w-25 text-dark font-weight-bold" >Actions</th>
+          <th class="  text-dark font-weight-bold">Client</th>
+          <th class="  text-dark font-weight-bold">Client's Email</th>
+          <th class="  text-dark font-weight-bold">doctor</th>
+          <th class="  text-dark font-weight-bold">Reason</th>
+          <th class="  text-dark font-weight-bold">Date</th>
+          <th class="  text-dark font-weight-bold">Status</th>
+          <th class="text-dark font-weight-bold" >Actions</th>
           </thead>
         </tr>
         
         @foreach($data as $data)
         <tr class="text-light "> 
-          <td class="text-center" style="width: 16.66%" >{{$data->name}}</td>
-          <td class="text-center" style="width: 16.66%">{{$data->email}}</td>
-          <td class="text-center" style="width: 16.66%">{{$data->doctor}}</td>
-          <td class="text-center" style="width: 16.66%">{{$data->message}}</td>
-          <td class="text-center" style="width: 16.66%">{{$data->date}}</td>
-          <td class="text-center" style="width: 16.66%">{{$data->status}}</td>
-          <td class="text-center w-auto">
+          <td class="text-center" >{{$data->name}}</td>
+          <td class="text-center">{{$data->email}}</td>
+          <td class="text-center">{{$data->doctor}}</td>
+          <td class="text-center">{{$data->message}}</td>
+          <td class="text-center">{{$data->date}}</td>
+          <td class="text-center">{{$data->status}}</td>
+          <td class="text-center">
           <div class="d-flex justify-content-center">
           <div class="text-center d-flex justify-content-end w-25 mx-2">
             <a class="btn btn-danger" onclick="return confirm('do you want to cancel this appointment?')" 
@@ -130,12 +130,9 @@
        </div>
         </table> 
                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+    </div>
           <!-- content-wrapper ends -->
           <!-- partial:partials/_footer.html -->
-        @include('admin.footer');
+    @include('admin.footer');
   </body>
 </html>

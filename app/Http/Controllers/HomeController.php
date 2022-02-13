@@ -17,13 +17,13 @@ function redirects(){
     if(Auth::id()){
         if(Auth::user()->Usertype =='0')
        {
-           $data1=Add_doctor::all();
+           $data1=add_doctor::all();
            $data=news::all();
            return view('user.home',compact('data','data1'));
        }
        else {
-           
-        return view('admin.home');
+        $data=add_doctor::all();
+        return view('admin.home',compact('data'));
        }
     }
     
@@ -34,9 +34,18 @@ function redirects(){
 }
 function index(){
     $data1=add_doctor::all();
+    $data3=add_doctor::all();
     $data2=appointment::all();
     $data=news::all();
-    return view('user.home',compact('data','data1','data2'));
+    return view('user.home',compact('data','data1','data2','data3'));
+}
+function doctors(){
+    $data1=add_doctor::all();
+    return view('user.doctors',compact('data1'));
+}
+function showappointments(){
+    $data=add_doctor::all();
+    return view('user.appointment',compact('data'));
 }
 function appointments(Request $request){
     $post=new Appointment();
@@ -50,6 +59,8 @@ function appointments(Request $request){
     if (Auth::user('login')) {
         $id=Auth::id();
         $post->userId= $id;
+    }else{
+        $post->userId='null';
     }
   $post->save();
   return back()->with('message','your appointment has been submitted successfuly');
@@ -75,6 +86,9 @@ function approve_appoint($id){
     $data->status="Approved";
     $data->save();
     return redirect()->back();
+}
+function about(){
+    return view('about');
 }
 function myAppointment(){
     $id=Auth::user()->id;
