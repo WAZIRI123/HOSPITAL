@@ -6,7 +6,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Corona Admin</title>
+    <title>Hospital Admin</title>
     <!-- plugins:css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -31,7 +31,6 @@
   width:23px;
   height:2px;
   right:9px;
-  left:;
   opacity: 0.8;
   cursor:pointer;
 
@@ -101,7 +100,5 @@ table tbody tr:hover,table tbody tr:nth-child(odd){
     background:rgba(0,0,0,0.05);
 }
 
-
-      }
     </style>
   </head>
